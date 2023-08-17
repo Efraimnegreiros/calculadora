@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+  <html>
+     <head>
+       <meta charset="UTF-8" />
+       <title>Calculadora</title>
+       <style type="text/css">
+       mrk {
+       background: #777777
+       }
+       
+       otput {
+       background: green
+       }
+       </style>
+     </head>
+     
+     <body>
+      <form>
+      
+      <p>
+       <label for="primeiro">Digite o primeiro valor</label>
+       <input type="number" id="primeiro"
+       oninput="soma(), subtracao(), multiplicacao(), divisao(), resto()">
+       
+      </p>
+      
+      <p>
+       <label for="segundo">Digite o segundo valor</label>
+       <input type="number" id="segundo"
+       oninput="soma(), subtracao(), multiplicacao(), divisao(), resto()">
+       
+      </p>
+      
+      <p>
+       <label for="iidade">Sua <mark>soma</mark> é: </label>
+       <output id="iidade">0</output>
+      </p>
+      
+      <p>
+        <label for="subtracaao">Sua <mark>diferença</mark> é: </label>
+        <output id="subtracaao">0</output>
+      </p>
+      
+      <p>
+        <label for="multiplicacaao">Sua <mark>multiplicação</mark> é: </label>
+        <output id="multiplicacaao">0</output>
+      </p>
+     
+      <p>
+        <label for="divisaao">Sua <mark>divisão</mark> é: </label>
+        <output id="divisaao">0</output>
+      </p>
+      
+      <p>
+       <input type="submit" value="Enviar">
+       <input type="reset" value="Limpar">
+      </p>
+      </form>
+     
+      <script type="text/javascript">
+        //alert('oi') - exibe uma mensagem
+        //confirm('Está gostando do nosso site?') - exibe uma mensagem com ok e cancelar
+        //prompt('Qual é o seu nome?') - o usuário pode digitar algo e marcar ok ou cancelar
+        function soma() {
+         iidade.innerHTML = Number(primeiro.value) + Number(segundo.value)
+        }
+        function subtracao() {
+         subtracaao.innerHTML  = Number(primeiro.value) - Number(segundo.value)
+        }
+        function multiplicacao() {
+         multiplicacaao.innerHTML = Number(primeiro.value) * Number(segundo.value)
+        }
+        function divisao() {
+         divisaao.innerHTML = Number(primeiro.value) / Number(segundo.value)
+        }
+        
+      </script>
+     
+     </body>
+  
+  </html>
